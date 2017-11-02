@@ -2,11 +2,11 @@ package com.hanyang.countriesOfTheWorld.model;
 
 public class Country {
     private String name;
-    private int population;
+    private String population;
     private String capital;
     private String[] officialLanguages ;
 
-    public Country(String name, int population, String capital, String[] officialLanguages) {
+    public Country(String name, String population, String capital, String[] officialLanguages) {
         this.name = name;
         this.population = population;
         this.capital = capital;
@@ -21,11 +21,11 @@ public class Country {
         this.name = name;
     }
 
-    public int getPopulation() {
+    public String getPopulation() {
         return population;
     }
 
-    public void setPopulation(int population) {
+    public void setPopulation(String population) {
         this.population = population;
     }
 

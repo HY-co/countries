@@ -19,6 +19,10 @@ header h1 {
 	text-transform: lowercase;
 }
 
+.sortBy {
+    margin-left: 230px;
+}
+
 header h1 a {
 	color: #fff;
 	text-decoration: none;

@@ -13,36 +13,21 @@
 			<h1><a th:href="@{/}">Countries of the World</a></h1>
 		</div>
 	</header>
+	<span class="sortBy">Sort by name:</span>
 	<div class="container">
-		<div th:each="country : ${countries}" class="country">
+		<div th:each="country : ${countriesByName}" class="country">
 			<a th:href="@{'/' + ${country.name}}">
-                <h4><img th:src="@{'/flags/' + ${country.name} + '.png'}" alt="@{'Flag of ' + ${country.name}}" width="10%" th:text="${country.name}"/></h4>
+                <h4><img th:src="@{'/flags/' + ${country.name} + '.png'}" alt="@{'Flag of ' + ${country.name}}" width="8%" th:text="@{' ' + ${country.name}}"/></h4>
 			</a>
 		</div>
-		<!--<div class="country">-->
-			<!--<a href="#">-->
-				<!--<img th:src="@{/flags/kenya.png}" alt="Flag of Kenya"/>-->
-				<!--<h4>Kenya</h4>-->
-			<!--</a>-->
-		<!--</div>-->
-		<!--<div class="country">-->
-			<!--<a href="#">-->
-				<!--<img th:src="@{/flags/ecuador.png}" alt="Flag of Ecuador"/>-->
-				<!--<h4>Ecuador</h4>-->
-			<!--</a>-->
-		<!--</div>-->
-		<!--<div class="country">-->
-			<!--<a href="#">-->
-				<!--<img th:src="@{/flags/france.png}" alt="Flag of France"/>-->
-				<!--<h4>France</h4>-->
-			<!--</a>-->
-		<!--</div>-->
-		<!--<div class="country">-->
-			<!--<a href="#">-->
-				<!--<img th:src="@{/flags/italy.png}" alt="Flag of Italy"/>-->
-				<!--<h4>Italy</h4>-->
-			<!--</a>-->
-		<!--</div>-->
+	</div>
+	<span class="sortBy">Sort by population:</span>
+	<div class="container">
+		<div th:each="country : ${countriesByPopulation}" class="country">
+			<a th:href="@{'/' + ${country.name}}">
+				<h4><img th:src="@{'/flags/' + ${country.name} + '.png'}" alt="@{'Flag of ' + ${country.name}}" width="8%" th:text="@{' ' + ${country.name}}"/></h4>
+			</a>
+		</div>
 	</div>
 </body>
 </html>
